@@ -25,12 +25,12 @@ Provides:	kernel(dm9601)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This package contains the Linux driver for the Intel(R) PRO/1000
-family of 10/100/1000 Ethernet network adapters.
+This package contains the Linux driver for the ethernet network
+adapters built on Davicom DM9601 chipset.
 
 %description -l pl
 Ten pakiet zawiera sterownik dla Linuksa do kart sieciowych
-10/100/1000Mbit z rodziny Intel(R) PRO/1000.
+zbudowanych na uk³adzie Davicom DM9601.
 
 %package -n kernel%{_alt_kernel}-smp-net-dm9601
 Summary:	Davicom DM9601 chipset driver for Linux
@@ -45,12 +45,12 @@ Requires(postun):	%releq_kernel_smp
 Provides:	kernel(dm9601)
 
 %description -n kernel%{_alt_kernel}-smp-net-dm9601
-This package contains the Linux SMP driver for the ethernet network adapters
-built on Davicom DM9601 chipset.
+This package contains the Linux SMP driver for the ethernet network
+adapters built on Davicom DM9601 chipset.
 
 %description -n kernel%{_alt_kernel}-smp-net-dm9601 -l pl
 Ten pakiet zawiera sterownik dla Linuksa SMP do kart sieciowych
-zbudowanych na chipsecie Davicom DM9601.
+zbudowanych na uk³adzie Davicom DM9601.
 
 %prep
 %setup -q -n 2.6.18
