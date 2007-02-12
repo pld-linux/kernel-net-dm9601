@@ -6,7 +6,7 @@
 #
 %define		_rel	1
 Summary:	Davicom DM9601 chipset driver for Linux
-Summary(pl.UTF-8):   Sterownik dla urządzeń na chipsecie Davicom DM9601
+Summary(pl.UTF-8):	Sterownik dla urządzeń na chipsecie Davicom DM9601
 Name:		kernel%{_alt_kernel}-net-dm9601
 Version:	1.0
 Release:	%{_rel}@%{_kernel_ver_str}
@@ -34,7 +34,7 @@ zbudowanych na układzie Davicom DM9601.
 
 %package -n kernel%{_alt_kernel}-smp-net-dm9601
 Summary:	Davicom DM9601 chipset driver for Linux
-Summary(pl.UTF-8):   Sterownik dla urządzeń na chipsecie Davicom DM9601
+Summary(pl.UTF-8):	Sterownik dla urządzeń na chipsecie Davicom DM9601
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Base/Kernel
 Requires(post,postun):	/sbin/depmod
