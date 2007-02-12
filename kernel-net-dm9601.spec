@@ -6,7 +6,7 @@
 #
 %define		_rel	1
 Summary:	Davicom DM9601 chipset driver for Linux
-Summary(pl):	Sterownik dla urz±dzeñ na chipsecie Davicom DM9601
+Summary(pl.UTF-8):   Sterownik dla urzÄ…dzeÅ„ na chipsecie Davicom DM9601
 Name:		kernel%{_alt_kernel}-net-dm9601
 Version:	1.0
 Release:	%{_rel}@%{_kernel_ver_str}
@@ -28,13 +28,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 This package contains the Linux driver for the ethernet network
 adapters built on Davicom DM9601 chipset.
 
-%description -l pl
+%description -l pl.UTF-8
 Ten pakiet zawiera sterownik dla Linuksa do kart sieciowych
-zbudowanych na uk³adzie Davicom DM9601.
+zbudowanych na ukÅ‚adzie Davicom DM9601.
 
 %package -n kernel%{_alt_kernel}-smp-net-dm9601
 Summary:	Davicom DM9601 chipset driver for Linux
-Summary(pl):	Sterownik dla urz±dzeñ na chipsecie Davicom DM9601
+Summary(pl.UTF-8):   Sterownik dla urzÄ…dzeÅ„ na chipsecie Davicom DM9601
 Release:	%{_rel}@%{_kernel_ver_str}
 Group:		Base/Kernel
 Requires(post,postun):	/sbin/depmod
@@ -48,9 +48,9 @@ Provides:	kernel(dm9601)
 This package contains the Linux SMP driver for the ethernet network
 adapters built on Davicom DM9601 chipset.
 
-%description -n kernel%{_alt_kernel}-smp-net-dm9601 -l pl
+%description -n kernel%{_alt_kernel}-smp-net-dm9601 -l pl.UTF-8
 Ten pakiet zawiera sterownik dla Linuksa SMP do kart sieciowych
-zbudowanych na uk³adzie Davicom DM9601.
+zbudowanych na ukÅ‚adzie Davicom DM9601.
 
 %prep
 %setup -q -n 2.6.18
