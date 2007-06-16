@@ -2,6 +2,7 @@
 # Conditionan build:
 %bcond_without	dist_kernel	# allow non-distribution kernel
 %bcond_without	smp		# don't build SMP module
+%bcond_without	up		# don't build UP module
 %bcond_with	verbose		# verbose build (V=1)
 #
 %define		_rel	1
@@ -80,11 +81,13 @@ rm -rf $RPM_BUILD_ROOT
 %postun -n kernel%{_alt_kernel}-smp-net-dm9601
 %depmod %{_kernel_ver}smp
 
+%if %{with up} || %{without dist_kernel}
 %files
 %defattr(644,root,root,755)
 %doc readme.txt
 /etc/modprobe.d/%{_kernel_ver}/dm9601.conf
 /lib/modules/%{_kernel_ver}/kernel/drivers/net/dm9601*.ko*
+%endif
 
 %if %{with smp} && %{with dist_kernel}
 %files -n kernel%{_alt_kernel}-smp-net-dm9601
